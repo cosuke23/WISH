@@ -1,0 +1,27 @@
+// QUERY FOR SF4
+
+SELECT student_info.lrn, student_info.ts_id, student_info.gender, track_strand.ts_id, track_strand.description FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id
+
+
+// QUERY FOR SF4 UPDATED
+
+
+SELECT student_info.lrn, student_info.ts_id, student_info.gender, COUNT(track_strand.ts_id) AS track, track_strand.description FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id GROUP BY track_strand.ts_id
+
+
+// QUERY FOR SF4 FOR MALE ICT
+
+SELECT student_info.lrn, student_info.ts_id, student_info.gender, COUNT(track_strand.ts_id) AS track, track_strand.description FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id where student_info.gender='Male' AND track_strand.ts_id='1' GROUP BY track_strand.ts_id
+
+
+// QUERY FOR SF4 FOR FEMALE ICT
+
+SELECT student_info.lrn, student_info.ts_id, student_info.gender, COUNT(track_strand.ts_id) AS track, track_strand.description FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id where student_info.gender='Female' AND track_strand.ts_id='1' GROUP BY track_strand.ts_id
+
+// SUB-QUERY FOR TOTAL MALE - ICT
+
+SELECT student_info.lrn, student_info.ts_id,(SELECT   COUNT(track_strand.ts_id) AS track FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id WHERE student_info.gender='Male' AND track_strand.ts_id='1' GROUP BY track_strand.ts_id) AS male_total, COUNT(track_strand.ts_id) AS track, track_strand.description FROM student_info LEFT JOIN track_strand ON student_info.ts_id=track_strand.ts_id GROUP BY track_strand.ts_id 
+
+//QUERY FOR SF7
+
+SELECT  teachers_table.em_id, teachers_table.last_name, teachers_table.first_name, teachers_table.middle_name, teachers_table.gender ,teachers_table.class, teachers_table.f_source, teachers_table.pos_desig, teachers_table.em_status, teachers_table.deg_post, teachers_table.m_s_training, teachers_table.minor, teachers_table_2.id, teachers_table_2.em_id, teachers_table_2.subject_advisory, teachers_table_2.grade_and_section, teachers_table_2.day, teachers_table_2.start, teachers_table_2.end, teachers_table_2.total_minutes, teachers_table_2.remarks FROM teachers_table LEFT JOIN teachers_table_2 ON teachers_table.em_id

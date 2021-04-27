@@ -1,0 +1,87 @@
+.container{
+	height: 816px;
+	width: 1248px;
+	 border-style: solid;
+}
+.title{
+	text-align: center;
+}
+.rowspace{
+	padding: 0px;
+}
+
+h1
+{
+	padding-top: 10px;
+}
+
+table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+	width: 1200px;
+
+}
+td, th {
+	padding:7px;
+
+	font-size: 8px;
+
+}
+th {
+	background: #f0e6cc;
+}
+.even {
+	background: #fbf8f0;
+}
+.odd {
+	background: #fefcf9;
+}
+h5 {
+	padding-left: 57px;
+}
+
+body {
+
+	height:3000px;
+}
+
+.left { 
+ width: 400px;
+ padding-right: 0px;
+ float: left;
+ }
+
+ .center {
+width: 400px;
+padding-left: px;
+
+ }
+ .cent {
+
+ 	float: center;
+ }
+ .guide{
+
+ 	float: left;
+ 	font-size: 12px;
+ 	width: 400px;
+ }
+ .Remarks{
+ 	font-size: 12px;
+ 	width: 300px;
+ 	text-align: left;
+ 	padding-left: 20px;
+ }
+ .Remarks p{
+ 	float: left;
+ }
+ .prep{
+ 	font-size: 15px;
+ 	width: 300px;
+ 	text-align: left;
+ 	float: left;
+ 	padding-left: 20px;
+ }
+ .footer {
+ 	padding-top: 10px;
+ }
